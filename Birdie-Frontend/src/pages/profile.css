@@ -1,0 +1,39 @@
+.btn-white {
+  background-color: #fff;
+  color: #3a9ef0;
+}
+
+.btn-blue {
+  background-color: #40a9ff;
+  color: white;
+}
+
+.btn-white:hover {
+  background-color: #3a9ef0;
+  color: white;
+}
+
+.btn-blue:hover {
+  background-color: #40a9ff;
+  color: white;
+}
+
+.btn-white:focus {
+  background-color: white;
+  color: #3a9ef0;
+}
+
+.btn-blue:focus {
+  background-color: #40a9ff;
+  color: white;
+}
+
+.btn-blue:active {
+  background-color: #40a9ff;
+  color: white;
+}
+
+.btn-white:active {
+  background-color: white;
+  color: #3a9ef0;
+}
