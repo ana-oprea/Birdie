@@ -11,3 +11,7 @@
 ## To start Socket (for the chat):
 * cd Birdie-Socket
 * npm start
+
+## To login use:
+* email: test@gmail.com
+* password: test
