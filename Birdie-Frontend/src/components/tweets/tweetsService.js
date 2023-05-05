@@ -1,18 +1,18 @@
-import axios from "axios"
+import axios from 'axios'
 
-const API_TWEETS_URL = "http://localhost:8080/api/tweets/"
-const API_TWEET_URL = "http://localhost:8080/api/tweet/"
-const API_LIKE_TWEET_URL = "http://localhost:8080/api/likeTweet/"
-const API_DISLIKE_TWEET_URL = "http://localhost:8080/api/dislikeTweet/"
-const API_TWEETS_BY_USER_ID_URL = "http://localhost:8080/api/tweetsByUserId/"
-const API_TWEETS_HOME_URL = "http://localhost:8080/api/tweetsForHome/"
-const API_LIKE_URL = "http://localhost:8080/api/likes/"
-const API_DELETE_LIKE_URL = "http://localhost:8080/api/deleteLike/"
-const API_RETWEETS_URL = "http://localhost:8080/api/retweets/"
-const API_GET_RETWEETS_URL = "http://localhost:8080/api/getRetweetsByUserId/"
-const API_RETWEET_TWEET_URL = "http://localhost:8080/api/retweetTweet/"
-const API_UNRETWEET_TWEET_URL = "http://localhost:8080/api/unretweetTweet/"
-const API_UPLOAD_URL = "http://localhost:8080/api/upload"
+const API_TWEETS_URL = 'http://localhost:8081/api/tweets/'
+const API_TWEET_URL = 'http://localhost:8081/api/tweet/'
+const API_LIKE_TWEET_URL = 'http://localhost:8081/api/likeTweet/'
+const API_DISLIKE_TWEET_URL = 'http://localhost:8081/api/dislikeTweet/'
+const API_TWEETS_BY_USER_ID_URL = 'http://localhost:8081/api/tweetsByUserId/'
+const API_TWEETS_HOME_URL = 'http://localhost:8081/api/tweetsForHome/'
+const API_LIKE_URL = 'http://localhost:8081/api/likes/'
+const API_DELETE_LIKE_URL = 'http://localhost:8081/api/deleteLike/'
+const API_RETWEETS_URL = 'http://localhost:8081/api/retweets/'
+const API_GET_RETWEETS_URL = 'http://localhost:8081/api/getRetweetsByUserId/'
+const API_RETWEET_TWEET_URL = 'http://localhost:8081/api/retweetTweet/'
+const API_UNRETWEET_TWEET_URL = 'http://localhost:8081/api/unretweetTweet/'
+const API_UPLOAD_URL = 'http://localhost:8081/api/upload'
 
 const getTweets = async () => {
   const response = await axios.get(API_TWEETS_URL)
@@ -51,7 +51,7 @@ const addTweet = async (tweetData) => {
   const response = await axios.post(API_TWEETS_URL, tweetData, {
     headers: {
       // Overwrite Axios's automatically set Content-Type
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
   })
 
@@ -62,7 +62,7 @@ const addRetweet = async (data) => {
   const response = await axios.post(API_RETWEETS_URL, data, {
     headers: {
       // Overwrite Axios's automatically set Content-Type
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
   })
 
@@ -73,7 +73,7 @@ const deleteRetweet = async (data) => {
   const response = await axios.delete(API_RETWEETS_URL, {
     headers: {
       // Overwrite Axios's automatically set Content-Type
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
     data: { data },
   })
@@ -103,7 +103,7 @@ const addLike = async (tweetId) => {
   const response = await axios.post(API_LIKE_URL, tweetId, {
     headers: {
       // Overwrite Axios's automatically set Content-Type
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
   })
 
@@ -114,7 +114,7 @@ const deleteLike = async (data) => {
   const response = await axios.delete(API_DELETE_LIKE_URL, {
     headers: {
       // Overwrite Axios's automatically set Content-Type
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
     data: { data },
   })
@@ -152,7 +152,7 @@ const uploadMedia = async (data) => {
   const response = await axios.post(API_UPLOAD_URL, d, {
     headers: {
       // Overwrite Axios's automatically set Content-Type
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
   })
 

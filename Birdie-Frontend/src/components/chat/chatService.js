@@ -1,11 +1,11 @@
-import axios from "axios"
+import axios from 'axios'
 
-const API_USERS_URL = "http://localhost:8080/api/getUserChats/"
-const API_FIND_CHAT_URL = "http://localhost:8080/api/find/"
-const API_GET_CHAT_BY_ID = "http://localhost:8080/api/getChatById/"
-const API_GET_MESSAGES = "http://localhost:8080/api/getMessagesByChatId/"
-const API_ADD_MESSAGE_URL = "http://localhost:8080/api/addMessage"
-const API_ADD_CHAT_URL = "http://localhost:8080/api/createChat"
+const API_USERS_URL = 'http://localhost:8081/api/getUserChats/'
+const API_FIND_CHAT_URL = 'http://localhost:8081/api/find/'
+const API_GET_CHAT_BY_ID = 'http://localhost:8081/api/getChatById/'
+const API_GET_MESSAGES = 'http://localhost:8081/api/getMessagesByChatId/'
+const API_ADD_MESSAGE_URL = 'http://localhost:8081/api/addMessage'
+const API_ADD_CHAT_URL = 'http://localhost:8081/api/createChat'
 
 const getUsers = async (userId) => {
   const response = await axios.get(`${API_USERS_URL}${userId}`)
@@ -33,7 +33,7 @@ const addChat = async (data) => {
   const response = await axios.post(API_ADD_CHAT_URL, data, {
     headers: {
       // Overwrite Axios's automatically set Content-Type
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
   })
 
@@ -50,7 +50,7 @@ const addMessage = async (data) => {
   const response = await axios.post(API_ADD_MESSAGE_URL, data, {
     headers: {
       // Overwrite Axios's automatically set Content-Type
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
   })
 

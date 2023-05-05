@@ -1,13 +1,13 @@
-import axios from "axios"
+import axios from 'axios'
 
-const API_USERS_URL = "http://localhost:8080/api/users/"
-const API_USER_URL = "http://localhost:8080/api/user/"
-const API_USER_BY_ID_URL = "http://localhost:8080/api/userById/"
-const API_USERNAME_URL = "http://localhost:8080/api/usersbyusername"
-const API_FOLLOW_USER_URL = "http://localhost:8080/api/follows/"
-const API_UNFOLLOW_USER_URL = "http://localhost:8080/api/unfollow/"
-const API_FOLLOWERS_URL = "http://localhost:8080/api/followers"
-const API_FOLLOWING_URL = "http://localhost:8080/api/following"
+const API_USERS_URL = 'http://localhost:8081/api/users/'
+const API_USER_URL = 'http://localhost:8081/api/user/'
+const API_USER_BY_ID_URL = 'http://localhost:8081/api/userById/'
+const API_USERNAME_URL = 'http://localhost:8081/api/usersbyusername'
+const API_FOLLOW_USER_URL = 'http://localhost:8081/api/follows/'
+const API_UNFOLLOW_USER_URL = 'http://localhost:8081/api/unfollow/'
+const API_FOLLOWERS_URL = 'http://localhost:8081/api/followers'
+const API_FOLLOWING_URL = 'http://localhost:8081/api/following'
 
 const getUsers = async () => {
   const response = await axios.get(API_USERS_URL)
@@ -39,7 +39,7 @@ const followUser = async (data) => {
   const response = await axios.post(API_FOLLOW_USER_URL, data, {
     headers: {
       // Overwrite Axios's automatically set Content-Type
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
   })
 
@@ -50,7 +50,7 @@ const unfollowUser = async (data) => {
   const response = await axios.delete(API_UNFOLLOW_USER_URL, {
     headers: {
       // Overwrite Axios's automatically set Content-Type
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
     data: { data },
   })
